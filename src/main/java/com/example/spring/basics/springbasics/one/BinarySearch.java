@@ -1,12 +1,17 @@
-package com.example.spring.basics.springbasics;
+package com.example.spring.basics.springbasics.one;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearch {
 	
 	@Autowired
+	@Qualifier(value = "bubbleMethod")
 	private SortingAlgorithem sortingAlgorithem;
 	
 	public Integer binarySearch(Integer[] inputArray, Integer item) {
