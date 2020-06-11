@@ -41,9 +41,9 @@ public class SpringBasicsApplication {
 		ComponentScanTestDao componentScanTestDao = applicationContext.getBean(ComponentScanTestDao.class);
 		System.out.println(componentScanTestDao);*/
 		
-		ApplicationContext applicationContext = SpringApplication.run(SpringBasicsApplication.class, args);
+		/*ApplicationContext applicationContext = SpringApplication.run(SpringBasicsApplication.class, args);
 		CDITestBusiness cdiTestBusiness = applicationContext.getBean(CDITestBusiness.class);
 		System.out.println(cdiTestBusiness);
-		System.out.println(cdiTestBusiness.getCdiTestDao());
+		System.out.println(cdiTestBusiness.getCdiTestDao());*/
 	}
 }
