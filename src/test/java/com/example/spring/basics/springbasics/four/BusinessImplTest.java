@@ -1,6 +1,5 @@
 package com.example.spring.basics.springbasics.four;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
