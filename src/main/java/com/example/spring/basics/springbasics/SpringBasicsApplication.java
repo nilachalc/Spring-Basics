@@ -1,11 +1,7 @@
 package com.example.spring.basics.springbasics;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-
-import com.example.spring.basics.springbasics.three.CDITestBusiness;
 
 @SpringBootApplication
 // This below code is just for testing.

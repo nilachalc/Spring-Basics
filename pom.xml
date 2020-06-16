@@ -8,10 +8,10 @@
 		<version>2.3.0.BUILD-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.spring.basics</groupId>
-	<artifactId>spring-basics</artifactId>
+	<groupId>com.example.spring.basics.boot</groupId>
+	<artifactId>spring-basics-boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-basics</name>
+	<name>spring-basics-boot</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
