@@ -1,15 +1,27 @@
 package com.example.spring.basics.springbasics;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+
+import com.example.spring.basics.springbasics.five.business.FirstBusinessClass;
+import com.example.spring.basics.springbasics.five.business.SecondBusinessClass;
 
 @SpringBootApplication
 // This below code is just for testing.
 // We can have an one step higher package declaration to have both of the below packages scanned at one go.   
 @ComponentScan(basePackages = {"com.example.spring.basics.springbasics"
 							, "com.example.spring.basics.componentscantest"})
-public class SpringBasicsApplication {
+public class SpringBasicsApplication implements CommandLineRunner {
 
+	@Autowired
+	private FirstBusinessClass firstBusinessClass;
+	
+	@Autowired
+	private SecondBusinessClass secondBusinessClass; 
+	
 	public static void main(String[] args) {
 		/* -- Example - 1
 		ApplicationContext context = SpringApplication.run(SpringBasicsApplication.class, args);
@@ -41,5 +53,17 @@ public class SpringBasicsApplication {
 		CDITestBusiness cdiTestBusiness = applicationContext.getBean(CDITestBusiness.class);
 		System.out.println(cdiTestBusiness);
 		System.out.println(cdiTestBusiness.getCdiTestDao());*/
+		
+		SpringApplication.run(SpringBasicsApplication.class, args);
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		try {
+			System.out.println(firstBusinessClass.firstBusinessLogic());
+			System.out.println(secondBusinessClass.secondBusinessLogic());
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }
